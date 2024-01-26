@@ -17,5 +17,5 @@ def project(data: dict) -> rx.component:
         else:
             return rx.box(rx.image(src=img, height="30px"))
 
-    return rx.link(rx.box(rx.center(rx.image(src=data["imagen"], height="180px")), rx.box(rx.vstack(rx.heading(data["titulo"]), rx.text(data["descripcion"], margin_left=Spacer.SMALL.value),  rx.flex(rx.spacer(), rx.text(data["area"], background=color.tercery.value, color="#000000 !important", margin_left=margin, padding=Spacer.SMALL.value, margin=Spacer.SMALL.value, border_radius=Spacer.SMALL.value), width="100%"), rx.responsive_grid(
+    return rx.link(rx.box(rx.center(rx.image(src=data["imagen"], height="180px")), rx.box(rx.vstack(rx.heading(data["titulo"],min_height="88px"), rx.text(data["descripcion"], margin_left=Spacer.SMALL.value),  rx.flex(rx.spacer(), rx.text(data["area"], background=color.tercery.value, color="#000000 !important", margin_left=margin, padding=Spacer.SMALL.value, margin=Spacer.SMALL.value, border_radius=Spacer.SMALL.value), width="100%"), rx.responsive_grid(
         imagen(data["img1"]), imagen(data["img2"]), imagen(data["img2"]), imagen(data["img2"]), spacing_y=Spacer.VERY_SMALL.value, columns=[4], spacing="2", padding=Spacer.SMALL.value)), background=color.secondary.value, width="100%", margin_bottom=Spacer.SMALL.value)), href=data["url"], is_external=True, margin=Spacer.SMALL.value)
